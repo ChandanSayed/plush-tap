@@ -58,7 +58,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 				<main id="home" class="home page-template page-template-home page-template-home-php page page-id-22">
 
 
-		<nav class="navbar navbar-expand-lg">
+		<nav class="navbar navbar-expand-lg" style="position: relative;z-index: 10">
         <div class="container-fluid main-nav">
           <a href="/"> <img src="images/main-logo.png" class="img-fluid"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,6 +80,10 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
       <!-- hero -->
       <section id="hero" >
+      <div class="body_back" style="top: 0; margin-top: -100px;height: 100px;">
+        <div class="blue"></div>
+        <div class="yellow"></div>
+      </div>
        <div class="container-fluid pb-4">
         <div class="row">
           <div class="col-lg-6">
@@ -88,7 +92,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <p>Expand your IAP options by adding a customized product, that will offer your players something different than digital items, Without any cost from you.
             </p>
             <div class="hero_buttons">
-              <a href="" target="_blank" class="primary_button"><img src="images/vector.png">Write an email</a>
+              <a id="contact-form2" href="" target="_blank" class="primary_button"><img src="images/vector.png">Write an email</a>
               <a href="https://calendly.com/youssef-hc8/plushtap-discuss" target="_blank" class="secondary_button"><img src="images/vector2.png"> Zoom meeting</a> 
             </div>
             <div style="position: relative;width: max-content;margin: auto;margin-top: 100px;">
@@ -142,16 +146,29 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
           </div>
         </div>
         </div>
-        <div class="body_back">
-        <div class="blue"></div>
-        <div class="yellow"></div>
-      </div>
+        
       </section>
       <section id="main_text" class="container-fluid" style="background: white">
         <div class="row">
           <div class="col text-center">
             <p id="about">PlushTap collaborates with you to design, sell, promote, and produce a unique product that fit in your game for your users 😎
             The best part? It's risk-free, with no investment required!.</p>
+            <div class="video-container container">
+              
+             <div class="video">
+              <button class="home-video-close is-hidden" onclick="videoStop()">&times;</button>
+              <div class="videoWrapper videoWrapper169 js-videoWrapper">
+
+                 <iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowTransparency="true" allowfullscreen data-src="https://player.vimeo.com/video/189360311?autoplay=1&title=0&byline=0&portrait=0&share=0"></iframe>
+
+                 <button class="videoPoster js-videoPoster" style="background-image:url('https://placehold.it/1600x900&text=Placeholder Image');">Play video</button>
+
+              </div>
+           </div>
+
+           <!-- Helps detect touch device  -->
+           <div id="js-pointer-detector"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -341,7 +358,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         <button id="closePopupTerms" class="close-popup" data-overlay="contactOverlay">Close</button>
         <div class="contact-form-container">
           <h2>Contact Us</h2>
-          <form id="contactForm">
+          <form id="contactForm" action="https://formspree.io/f/xvoeolgw" method="POST">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required>
@@ -354,7 +371,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
               <label for="message">Message</label>
               <textarea id="message" name="message" rows="5" required></textarea>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" class="primary_button">Let's fix that</button>
           </form>
         </div>
 
@@ -369,7 +386,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
           <div class="col">
             <h5>money on the table!</h5>
             <p>If your game has an interesting character and a community that loves your game, without offering something new to purchase you are leaving money on the table.</p>
-            <a id="contact" href="" target="_blank" class="primary_button"><img src="images/vector.png">Let's fix that</a>
+            <a id="contact-form" href="" target="_blank" class="primary_button"><img src="images/vector.png">Let's fix that</a>
           </div>
         </div>
         <div class="row main_footer">
@@ -397,7 +414,12 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 <p>2023 © All rights reserved.</p>
               </div>
               <div class="col-md-6">
-                
+                <div class="social text-center text-md-end">
+                  <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png"></a>
+                  <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png"></a>
+                  <a href="https://www.tiktok.com/" target="_blank"><img src="images/tiktok.png"></a>
+                  <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png"></a>
+                </div>
               </div>
             </div>
           </div>
