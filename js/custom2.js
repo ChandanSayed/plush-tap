@@ -93,10 +93,11 @@ document.getElementById('contact-form2').addEventListener('click', function(e) {
 
 // play the targeted video (and hide the poster frame)
 function videoPlay($wrapper) {
-   var $iframe = $wrapper.find(".js-videoIframe");
+   var $iframe = $(".js-videoIframe");
    var src = $iframe.data("src");
    // hide poster
    $wrapper.addClass("videoWrapperActive");
+   $('.video-container').addClass("videoWrapperActive");
    // add iframe src in, starting the video
    $iframe.attr("src", src);
    $(".home-video-close").removeClass("is-hidden");
@@ -139,7 +140,7 @@ function touchVideo() {
 $(document).on("click", ".js-videoPoster", function(ev) {
    ev.preventDefault();
    var $poster = $(this);
-   var $wrapper = $poster.closest(".js-videoWrapper");
+   var $wrapper = $(".js-videoWrapper");
    videoPlay($wrapper);
 });
 
